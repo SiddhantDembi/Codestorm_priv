@@ -1,167 +1,112 @@
-import React from "react";
+import React, { useState } from "react";
 import "../diff.css"
+import { questions } from "../Data/data";
+import { useDispatch } from "react-redux";
+import axios from "axios";
+// import { trackForMutations } from "@reduxjs/toolkit/dist/immutableStateInvariantMiddleware";
 
-async function onfinishHandler(e){
-    e.preventDefault();
-    console.log(e)
-    try {
-      dispatch(showLoading());
-      const res = await axios.post("http://127.0.0.1:5000/diff");
 
-      dispatch(hideLoading());
-      if (res.data.signup) {
-        sessionStorage.setItem("token", res.data.token); // Store the token
-        message.success("Register Successfully!");
-        navigate("/login");
-      } else {
-        message.error(res.data.error);
-      }
-    } catch (error) {
-      dispatch(hideLoading());
-      console.log(error);
-      message.error("Something Went Wrong");
-    }
-  };
+// async function onfinishHandler(e) {
+//     const dispatch = useDispatch()
+//     e.preventDefault();
+//     console.log(e);
+//     const [var1, setVar1] = useState([]);
+    
+//     // const formDataObject = {};
+//     // formData.forEach((value, key) => {
+//     //     formDataObject[key] = value;
+//     // });
+
+//     try {
+//         // dispatch(showLoading());
+        
+
+//         dispatch(hideLoading());
+//         // Handle the response as needed
+//     } catch (error) {
+//         dispatch(hideLoading());
+//         console.log(error);
+//         message.error("Something Went Wrong");
+//     }
+// }
+
+
+
 
 export default function Difficulties(){
+    const [var1, setVar1]=useState([])
+
+    const handleChange = (e) => {
+        setVar1({ ...var1, [e.target.name]: e.target.value});
+        console.log(var1);
+      };
+
+    function Handleclick(e) {
+        e.preventDefault();
+        // const formData = new FormData(e.target);
+        // console.log(formData);
+      var inputbox1 = document.getElementById('ans1');
+      var input1 = inputbox1.value;
+      console.log(input1);
+      var inputbox2 = document.getElementById('ans2');
+      var input2 = inputbox2.value;
+      console.log(input2);
+      var inputbox3 = document.getElementById('ans3');
+      var input3 = inputbox3.value;
+      console.log(input3);
+      var inputbox4 = document.getElementById('ans4');
+      var input4 = inputbox4.value;
+      console.log(input4);
+      var inputbox5 = document.getElementById('ans5');
+      var input5 = inputbox5.value;
+      console.log(input5);
+      var inputbox6 = document.getElementById('ans6');
+      var input6 = inputbox6.value;
+      console.log(input6);
+      var inputbox7 = document.getElementById('ans7');
+      var input7 = inputbox7.value;
+      console.log(input7);
+      var inputbox8 = document.getElementById('ans8');
+      var input8 = inputbox8.value;
+      console.log(input8);
+      var inputbox9 = document.getElementById('ans9');
+      var input9 = inputbox9.value;
+      console.log(input9);
+      var inputbox10 = document.getElementById('ans10');
+      var input10 = inputbox10.value;
+      console.log(input10);
+      const res = axios.post("http://127.0.0.1:5000/diff", {"ans1":input1,"ans2":input2,"ans3":input3,"ans4":input4,"ans5":input5,"ans6":input6,"ans7":input7,"ans8":input8,"ans9":input9,"ans10":input10,
+    })
+        .then((res)=> {
+            console.log(res.data)
+
+        })
+        .catch((err)=> {
+            console.log(err)
+        })
+    // console.log(res.data)
+    }
     return ( 
         <>
         
-        <h1 className="title2">Assesment</h1>
 
-        <form onSubmit={onfinishHandler} id="form-diff">
+        <form onSubmit={Handleclick} id="form-diff">
 
-        <h1 className="title2">Section 1: Interests</h1>
-
-        <div className="form_control">
-            <label className="question">
-            1. How interested are you in solving complex mathematical problems?
+        <h1 className="title2">Assessment</h1>
+        {questions.map(({id, question, idx, name})=>{
+            return(
+            <div className="form_control" key={id}>
+            <label className="question" >
+            {id}. {question} (Rate from 1-5)
             </label> 
-            <label htmlFor="Male"><input type="radio" name="1"/>Not interested at all</label>
-            <label htmlFor="Male"><input type="radio" name="1"/>Slightly interested</label>
-            <label htmlFor="Male"><input type="radio" name="1"/>Moderately interested</label>
-            <label htmlFor="Male"><input type="radio" name="1"/>Very interested</label>
-            <label htmlFor="Male"><input type="radio" name="1"/>Extremely interested</label>
+            <input type="text" value={var1[name]} id={idx} name={name} onChange={handleChange} ></input>
+            {/* <button type="submit" onClick={Handleclick}>Submit</button> */}
         </div>
-
-        {/* <div className="form_control">
-            <label className="question">
-            How do you feel about working in a team and collaborating with others?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>I prefer working alone</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>I'm somewhat comfortable working in a team</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>I'm moderately comfortable working in a team</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>I'm comfortable working in a team</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>I thrive in team settings</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            3.Do you enjoy creative activities like writing, painting, or playing a musical instrument?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="3"/>Not at all</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Slightly</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Moderately</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Very much</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Extremely</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            4.Are you interested in understanding human behavior, motivations, and emotions?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="3"/>Not interested</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Slightly interested</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Moderately interested</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Very interested</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Extremely interested</label>
-        </div>
-
-        <h1 className="title2">Section 2: Strengths</h1>
-
-        <div className="form_control">
-            <label className="question">
-            1.How would you rate your strengths as described by others?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>Very weak</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Weak</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Average</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Strong</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Very strong</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            2.how do you typically handle challenges or setbacks in your life or work?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="5"/>Poorly </label>
-            <label htmlFor="Male"><input type="radio" name="5"/>Somewhat poorly</label>
-            <label htmlFor="Male"><input type="radio" name="5"/>Moderately</label>
-            <label htmlFor="Male"><input type="radio" name="5"/>Effectively</label>
-            <label htmlFor="Male"><input type="radio" name="5"/>Very effectively</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            3.how would you rate the effectiveness of a specific accomplishment or project where you felt your skills and strengths were utilized? 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="6"/>Not effective at all</label>
-            <label htmlFor="Male"><input type="radio" name="6"/>Slightly effective</label>
-            <label htmlFor="Male"><input type="radio" name="6"/>Moderately effective</label>
-            <label htmlFor="Male"><input type="radio" name="6"/>Very effective</label>
-            <label htmlFor="Male"><input type="radio" name="6"/>Extremely effective</label>
-        </div>
+            )
+        })}
 
 
-        <h1 className="title2">Section 3: Values</h1>
-
-        <div className="form_control">
-            <label className="question">
-            1.What motivates you the most in your career choice?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="8"/>Not motivated</label>
-            <label htmlFor="Male"><input type="radio" name="8"/>Slightly motivated</label>
-            <label htmlFor="Male"><input type="radio" name="8"/>Moderately motivated</label>
-            <label htmlFor="Male"><input type="radio" name="8"/>Very motivated</label>
-            <label htmlFor="Male"><input type="radio" name="8"/>Extremely motivated</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            2.How important is work-life balance to you?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="9"/>Not important at all</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Slightly important</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Moderately important</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Very important</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Extremely important</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            3.What values do you prioritize in your work environment? 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="10"/>Not important</label>
-            <label htmlFor="Male"><input type="radio" name="10"/>Slightly important</label>
-            <label htmlFor="Male"><input type="radio" name="10"/>Moderately important</label>
-            <label htmlFor="Male"><input type="radio" name="10"/>Very important</label>
-            <label htmlFor="Male"><input type="radio" name="10"/>Extremely important</label>
-        </div>
-
-
-        <div className="form_control">
-            <label className="question">
-            4. How important is financial stability and compensation in your career choices?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="9"/>Not important at all</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Slightly important</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Moderately important</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Very important</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Extremely important</label>
-        </div> */}
-
-        <button className="btn btn-primary" id="b1" type="submit">
+        <button className="btn btn-primary" id="b1" type="submit" onClick={Handleclick}>
             Submit
           </button>
 

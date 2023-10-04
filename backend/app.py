@@ -69,14 +69,31 @@ def signup():
         return jsonify({'signup': True, 'token': access_token})
     return jsonify({'signup': False, 'error': 'EmailId already registered'})
 
+# @app.route('/diff', methods=['POST'])
+# def dif():
+#     response = request.get_json()
+#     print(response)
+#     db.ans.insert_one({
+#             response
+#         })
+#     return jsonify({"msg":'hello'})
+
 @app.route('/diff', methods=['POST'])
+# @jwt_required()
 def dif():
     response = request.get_json()
     print(response)
-    db.ans.insert_one({
-            response
-        })
-    return jsonify({"msg":'hello'})
+    
+    true_responses = [key for key, value in response.items() if value]
+    
+    if true_responses:
+        print("True responses:", true_responses)
+
+    db.ans.insert_one({"ans1": response['ans1'],"ans2": response['ans2'],"ans3": response['ans3'],"ans4": response['ans4'],"ans5": response['ans5'],"ans6": response['ans6'],"ans7": response['ans7'],"ans8": response['ans8'],"ans9": response['ans9'],"ans10": response['ans10'],})
+    # "email":jwt_required()})
+    return jsonify({"key": 'hello'})
+
+
     
     # elif response['userType'] == 'ORG':
     #     isOrg = db.organisations.find_one({'email': response['email']})
