@@ -4,11 +4,19 @@ import searchIcon from "../assets/searchIcon.svg";
 import signoutIcon from "../assets/signoutIcon.svg";
 import profileIcon from "../assets/profileIcon.svg";
 import bellIcon from "../assets/bellIcon.svg";
+import Login from "./Login";
+import { useNavigate } from "react-router-dom";
 
 export default function Header2() {
-  const [popup, setPopup] = useState(false);
+  // const [popup, setPopup] = useState(false);
+
+  const navigate = useNavigate();
+  const login =()=>{
+    navigate('./Login');
+  }
+
   return (
-    <header >
+    <header>
       <p>Udyog Sarthi App</p>
       <form id="header-form">
         <input type="text" placeholder="Search" />
@@ -21,7 +29,10 @@ export default function Header2() {
         <li>About Us</li>
         <li>Contact Us</li>
       </ul>
-      <div id="user-util">
+      <button className="btn" onClick={login}>
+        Login/Signup
+      </button>
+      {/* <div id="user-util">
         <span>
           <img src={bellIcon} />
         </span>
@@ -37,8 +48,8 @@ export default function Header2() {
             <img src={signoutIcon} />
             <span>Sign Out</span>
           </p>
-        </div>
-      )}
+         </div>
+       )} */}
     </header>
   );
-}
+ }

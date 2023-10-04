@@ -206,3 +206,22 @@ ul > li:hover::after{
         justify-content: space-around;
     }
 }
+
+.btn {
+    cursor: pointer;
+    color: white;
+    background: #2b2b2b;
+    font-size: 15px;
+    border: transparent;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: -7px;
+    transition: 0.3s ease-in-out all;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .btn:hover {
+    background: rgb(194, 195, 160);
+    color: black;
+  }

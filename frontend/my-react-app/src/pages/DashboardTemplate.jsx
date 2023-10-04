@@ -93,8 +93,8 @@ function Sidebar() {
     },
     {
       id:6,
-      href:"#",
-      text: "Courses",
+      href:"/resources",
+      text: "Resources",
       image: academic_managementIcon,
       sub_text: [],
     },
@@ -129,17 +129,17 @@ function Sidebar() {
 function Dashboard() {
   return (
     <>
-      <div className="middle-dash">
+      {/* <div className="middle-dash">
       <img src={emblem} alt="" />
       <p id="welcome-text">
         Department of Empowerment of Persons with Disablities, Ministry of Social Justice and Empowerment, Govt. of India
-      </p>
+      </p> */}
 
+    {/* </div> */}
       {/* <DataChart /> */}
-    </div>
-    <div className="bottom-dash">
+    {/* <div className="bottom-dash">
       <img src={photo} alt="" />
-    </div>
+    </div> */}
     </>
     
   );

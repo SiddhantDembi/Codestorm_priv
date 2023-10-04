@@ -5,369 +5,139 @@ export default function Difficulties(){
     return ( 
         <>
         
-        <h1 className="title">Functional Difficulties faced</h1>
+        <h1 className="title">Assesment</h1>
 
         <form id="form-diff">
 
-        <h1 title>Vision</h1>
+        <h1 title>Section 1: Interests</h1>
 
         <div className="form_control">
             <label className="question">
-            1.[Do/Does] [you/he/she] wear glasses?
+            1. How interested are you in solving complex mathematical problems?
             </label> 
-            <label htmlFor="Male"><input type="radio" name="1"/>Yes</label>
-            <label htmlFor="Male"><input type="radio" name="1"/>No</label>
-            <label htmlFor="Male"><input type="radio" name="1"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="1"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="1"/>Not interested at all</label>
+            <label htmlFor="Male"><input type="radio" name="1"/>Slightly interested</label>
+            <label htmlFor="Male"><input type="radio" name="1"/>Moderately interested</label>
+            <label htmlFor="Male"><input type="radio" name="1"/>Very interested</label>
+            <label htmlFor="Male"><input type="radio" name="1"/>Extremely interested</label>
         </div>
 
         <div className="form_control">
             <label className="question">
-            2.[Do/Does] [you/he/she] have difficulty seeing, even when wearing
-[your/his/her] glasses? Would you say…  
+            How do you feel about working in a team and collaborating with others?
             </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="2"/>I prefer working alone</label>
+            <label htmlFor="Male"><input type="radio" name="2"/>I'm somewhat comfortable working in a team</label>
+            <label htmlFor="Male"><input type="radio" name="2"/>I'm moderately comfortable working in a team</label>
+            <label htmlFor="Male"><input type="radio" name="2"/>I'm comfortable working in a team</label>
+            <label htmlFor="Male"><input type="radio" name="2"/>I thrive in team settings</label>
         </div>
 
         <div className="form_control">
             <label className="question">
-            3.[Do/does] [you/he/she] have difficulty clearly seeing the picture on a coin
-even when wearing [your/his/her] glasses? Would you say… [Read response
-categories]? 
+            3.Do you enjoy creative activities like writing, painting, or playing a musical instrument?
             </label> 
-            <label htmlFor="Male"><input type="radio" name="3"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Cannot do at all</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Not at all</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Slightly</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Moderately</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Very much</label>
             <label htmlFor="Male"><input type="radio" name="3"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="3"/>Don't know</label>
-        </div>
-
-        <h1 title>Hearing</h1>
-
-        <div className="form_control">
-            <label className="question">
-            4.[Do/Does] [you/he/she] use a hearing aid?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>Yes</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>No</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Extremely</label>
         </div>
 
         <div className="form_control">
             <label className="question">
-            5.[Do/Does] [you/he/she] have difficulty hearing,  even when using a
-hearing aid(s)? Would you say… 
+            4.Are you interested in understanding human behavior, motivations, and emotions?
             </label> 
-            <label htmlFor="Male"><input type="radio" name="5"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="5"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="5"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="5"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="5"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="5"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Not interested</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Slightly interested</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Moderately interested</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Very interested</label>
+            <label htmlFor="Male"><input type="radio" name="3"/>Extremely interested</label>
+        </div>
+
+        <h1 title>Section 2: Strengths</h1>
+
+        <div className="form_control">
+            <label className="question">
+            1.How would you rate your strengths as described by others?
+            </label> 
+            <label htmlFor="Male"><input type="radio" name="4"/>Very weak</label>
+            <label htmlFor="Male"><input type="radio" name="4"/>Weak</label>
+            <label htmlFor="Male"><input type="radio" name="4"/>Average</label>
+            <label htmlFor="Male"><input type="radio" name="4"/>Strong</label>
+            <label htmlFor="Male"><input type="radio" name="4"/>Very strong</label>
         </div>
 
         <div className="form_control">
             <label className="question">
-            6.[Do/does] [you/he/she] have difficulty hearing what is said in a conversation with one
-other person in a quiet room even when using [your/his/her] hearing
-aid(s)? Would you say… 
+            2.how do you typically handle challenges or setbacks in your life or work?
             </label> 
-            <label htmlFor="Male"><input type="radio" name="6"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="6"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="6"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="6"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="6"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="6"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="5"/>Poorly </label>
+            <label htmlFor="Male"><input type="radio" name="5"/>Somewhat poorly</label>
+            <label htmlFor="Male"><input type="radio" name="5"/>Moderately</label>
+            <label htmlFor="Male"><input type="radio" name="5"/>Effectively</label>
+            <label htmlFor="Male"><input type="radio" name="5"/>Very effectively</label>
         </div>
 
         <div className="form_control">
             <label className="question">
-            7.[Do/does] [you/he/she] have difficulty hearing what is said in a conversation with one
-other person in a noisier room even when using [your/his/her] hearing
-aid(s)? Would you say… 
+            3.how would you rate the effectiveness of a specific accomplishment or project where you felt your skills and strengths were utilized? 
             </label> 
-            <label htmlFor="Male"><input type="radio" name="7"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="7"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="7"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="7"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="7"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="7"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="6"/>Not effective at all</label>
+            <label htmlFor="Male"><input type="radio" name="6"/>Slightly effective</label>
+            <label htmlFor="Male"><input type="radio" name="6"/>Moderately effective</label>
+            <label htmlFor="Male"><input type="radio" name="6"/>Very effective</label>
+            <label htmlFor="Male"><input type="radio" name="6"/>Extremely effective</label>
         </div>
 
-        <h1 title>Mobility</h1>
+
+        <h1 title>Section 3: Values</h1>
 
         <div className="form_control">
             <label className="question">
-            8.[Do/Does] [you/he/she] have difficulty walking or climbing steps? Would you say…
+            1.What motivates you the most in your career choice?
             </label> 
-            <label htmlFor="Male"><input type="radio" name="8"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="8"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="8"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="8"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="8"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="8"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="8"/>Not motivated</label>
+            <label htmlFor="Male"><input type="radio" name="8"/>Slightly motivated</label>
+            <label htmlFor="Male"><input type="radio" name="8"/>Moderately motivated</label>
+            <label htmlFor="Male"><input type="radio" name="8"/>Very motivated</label>
+            <label htmlFor="Male"><input type="radio" name="8"/>Extremely motivated</label>
         </div>
 
         <div className="form_control">
             <label className="question">
-            9.[Do/does] [you/he/she] use any equipment or receive help for getting around?
+            2.How important is work-life balance to you?
             </label> 
-            <label htmlFor="Male"><input type="radio" name="9"/>Yes</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>No</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="9"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Not important at all</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Slightly important</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Moderately important</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Very important</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Extremely important</label>
         </div>
 
         <div className="form_control">
             <label className="question">
-            10.[Do/Does] [you/he/she] have difficulty walking 100 meters on level ground, that would
-be about the length of one football field or one city block without the use
-of [your/his/her] aid? Would you say… 
+            3.What values do you prioritize in your work environment? 
             </label> 
-            <label htmlFor="Male"><input type="radio" name="10"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="10"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="10"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="10"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="10"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="10"/>Don't know</label>
+            <label htmlFor="Male"><input type="radio" name="10"/>Not important</label>
+            <label htmlFor="Male"><input type="radio" name="10"/>Slightly important</label>
+            <label htmlFor="Male"><input type="radio" name="10"/>Moderately important</label>
+            <label htmlFor="Male"><input type="radio" name="10"/>Very important</label>
+            <label htmlFor="Male"><input type="radio" name="10"/>Extremely important</label>
         </div>
 
 
         <div className="form_control">
             <label className="question">
-            11.[Do/does] [you/he/she] use any of the following?
+            4. How important is financial stability and compensation in your career choices?
             </label> 
-            <label htmlFor="Male"><input type="checkbox" name="10"/>Cane or walking stick? </label>
-            <label htmlFor="Male"><input type="checkbox" name="10"/>Walker or Zimmer frame?</label>
-            <label htmlFor="Male"><input type="checkbox"name="10"/>Crutches?</label>
-            <label htmlFor="Male"><input type="checkbox"name="10"/>Wheelchair or scooter?</label>
-            <label htmlFor="Male"><input type="checkbox" name="10"/>Artificial limb (leg/foot)?</label>
-            <label htmlFor="Male"><input type="checkbox" name="10"/>Someone’s assistance?</label>
-            <label htmlFor="Male"><input type="checkbox" name="10"/>Other(please specify):</label>
-            <input type="text" />
+            <label htmlFor="Male"><input type="radio" name="9"/>Not important at all</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Slightly important</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Moderately important</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Very important</label>
+            <label htmlFor="Male"><input type="radio" name="9"/>Extremely important</label>
         </div>
-
-
-
-        <div className="form_control">
-            <label className="question">
-            12.[Do/Does] [you/he/she] have difficulty walking half a km on level ground, that would be
-the length of five football fields or five city blocks without the use of
-[your/his/her] aid? Would you say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            13.[Do/Does] [you/he/she] have difficulty walking up or down 12 steps? Would you say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            14.[Do/Does] [you/he/she] have difficulty walking 100 meters on level ground, that would
-be about the length of one football field or one city block, when using [your/his/her] aid?
-Would you say…  
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            15.[Do/Does] [you/he/she] have difficulty walking half a km on level ground, that would be
-the length of five football fields or five city blocks, when using [your/his/her] aid?
-Would you say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
-        </div>
-
-        <h1 title>Communication</h1>
-
-        <div className="form_control">
-            <label className="question">
-           16.Using [your/his/her] usual language, [do/does] [you/he/she] have difficulty
-communicating, for example understanding or being understood? Would you say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            17.[Do/does] [you/he/she] use sign language?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>Yes</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>No</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
-        <h1 title>Cognition(Remembering)</h1>
-
-        <div className="form_control">
-            <label className="question">
-            18.[Do/does] [you/he/she] have difficulty remembering or concentrating? Would you say…
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            19.[Do/does] [you/he/she] have difficulty remembering, concentrating, or both? Would you
-say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>Difficulty remembering only</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Difficulty concentrating only</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Difficulty with both remembering and concentrating </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            20.How often [do/does] [you/he/she] have difficulty remembering? Would you say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>Sometimes</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Often</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>All of the time</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
-<div className="form_control">
-            <label className="question">
-            21.[Do/does] [you/he/she] have difficulty remembering a few things, a lot of things, or
-almost everything? Would you say…
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>A few things</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>A lot of things</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Almost everything</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
-        <h1 title>Self Care</h1>
-
-        <div className="form_control">
-            <label className="question">
-            22.[Do/does] [you/he/she] have difficulty with self care, such as washing all over or
-dressing? Would you say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
-        </div>
-
-        <h1 title>Affect (Anxiety and Depression)</h1>
-
-        <div className="form_control">
-            <label className="question">
-            23.How often [do/does] [you/he/she] feel worried, nervous or anxious? Would you say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="2"/>No difficulty </label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Some difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>A lot of difficulty</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Cannot do at all</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="2"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-           24.[Do/Does] [you/he/she] take medication for these feelings?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>Yes</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>No</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            25.Thinking about the last time [you/he/she] felt worried, nervous or anxious, how would
-[you/he/she] describe the level of these feelings? Would [you/he/she] say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>A little</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>A lot</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Somewhere in between a little and lot</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            26.How often [do/does] [you/he/she] feel depressed? Would [you/he/she] say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>Daily</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Weekly</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Monthly</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            27.[Do/Does] [you/he/she] take medication for depression?
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>Yes</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>No</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
-        <div className="form_control">
-            <label className="question">
-            28.Thinking about the last time [you/he/she] felt worried, nervous or anxious, how would
-[you/he/she] describe the level of these feelings? Would [you/he/she] say… 
-            </label> 
-            <label htmlFor="Male"><input type="radio" name="4"/>A little</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>A lot</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Somewhere in between a little and lot</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Refused</label>
-            <label htmlFor="Male"><input type="radio" name="4"/>Don't know</label>
-        </div>
-
 
         </form>
     </>

@@ -20,6 +20,7 @@ import Application from "./pages/Application";
 import Apply from "./pages/Apply";
 import Difficulties from "./pages/Difficulties";
 import Address from "./pages/Address";
+import Resources from "./pages/ResourcePage";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -63,6 +64,13 @@ function App() {
               path="/application"
               element={
                 <><Header /><Application /><DashboardTemplate /></>
+                
+              }
+              />
+            <Route
+              path="/resources"
+              element={
+                <><Header /><Resources /><DashboardTemplate /></>
                 
               }
               />
