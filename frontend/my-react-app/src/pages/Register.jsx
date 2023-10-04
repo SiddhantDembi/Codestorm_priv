@@ -8,17 +8,20 @@ import { showLoading, hideLoading } from "../redux/features/alertSlice";
 const Register = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  //form handler
+
+  // form handler
   const onfinishHandler = async (values) => {
     try {
       dispatch(showLoading());
-      const res = await axios.post("/api/v1/user/register", values);
+      const res = await axios.post("http://127.0.0.1:5000/signup", values);
+
       dispatch(hideLoading());
-      if (res.data.success) {
+      if (res.data.signup) {
+        sessionStorage.setItem("token", res.data.token); // Store the token
         message.success("Register Successfully!");
-        navigate("/login");
+        navigate("/");
       } else {
-        message.error(res.data.message);
+        message.error(res.data.error);
       }
     } catch (error) {
       dispatch(hideLoading());

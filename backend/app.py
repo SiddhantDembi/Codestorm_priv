@@ -56,32 +56,35 @@ def login():
 @app.route('/signup', methods=['POST', 'GET'])
 def signup():
     response = request.get_json()
-    if response['userType'] == 'USER':
-        isUser = db.users.find_one({'email': response['email']})
-        if isUser is None:
-            hashed_pass = bcrypt.generate_password_hash(response['password']).decode('utf-8')
-            db.users.insert_one({
-                'name': response['name'],
-                'email': response['email'],
-                'password': hashed_pass,
-                'nfts': []
-            })
-            return jsonify({'signup': True})
-        return jsonify({'signup': False, 'error': 'EmailId already registered'})
+    # if response['userType'] == 'USER':
+    isUser = db.users.find_one({'email': response['email']})
+    if isUser is None:
+        hashed_pass = bcrypt.generate_password_hash(response['password']).decode('utf-8')
+        db.users.insert_one({
+            'name': response['name'],
+            'email': response['email'],
+            'password': hashed_pass,
+            'nfts': []
+        })
+        access_token = create_access_token(identity=response['email'])
+        return jsonify({'signup': True, 'token': access_token})
+    return jsonify({'signup': False, 'error': 'EmailId already registered'})
 
-    elif response['userType'] == 'ORG':
-        isOrg = db.organisations.find_one({'email': response['email']})
-        if isOrg is None:
-            hashed_pass = bcrypt.generate_password_hash(response['password']).decode('utf-8')
-            db.organisations.insert_one({
-                'name': response['name'],
-                'email': response['email'],
-                'gstin': response['gstin'],
-                'password': hashed_pass,
-                'nfts': []
-            })
-            return jsonify({'signup': True})
-        return jsonify({'signup': False, 'error': 'EmailId already registered'})
+    # elif response['userType'] == 'ORG':
+    #     isOrg = db.organisations.find_one({'email': response['email']})
+    #     if isOrg is None:
+    #         hashed_pass = bcrypt.generate_password_hash(response['password']).decode('utf-8')
+    #         db.organisations.insert_one({
+    #             'name': response['name'],
+    #             'email': response['email'],
+    #             'gstin': response['gstin'],
+    #             'password': hashed_pass,
+    #             'nfts': []
+    #         })
+    #         access_token = create_access_token(identity=response['email'])
+    #         return jsonify({'signup': True, 'token': access_token})
+    #     return jsonify({'signup': False, 'error': 'EmailId already registered'})
+
 
 
 @app.route('/buyNFT', methods=['POST', 'GET'])
