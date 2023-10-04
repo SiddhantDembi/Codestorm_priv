@@ -1,0 +1,6 @@
+1. Make q and a based on career conselling 
+2. make an algo to provide ideal career path based on user ans
+3. collect all yt vid on carreer and articles based on it and display it
+4. current market status. entry salaries of each field. (insight of that field)
+5. make data set (json data for job details, career option list) or api
+6. forum at end
