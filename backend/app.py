@@ -34,6 +34,7 @@ def pages():
 @app.route('/login', methods=['POST', 'GET'])
 def login():
     response = request.get_json()
+    print(response)
     # if response['userType'] == 'USER':
     user = db.users.find_one({'email': response['email']})
     if user:

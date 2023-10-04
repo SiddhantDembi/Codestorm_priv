@@ -2,7 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-
+import store from './redux/store'
+import { Provider } from 'react-redux'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "./pages/Login";
@@ -25,21 +26,23 @@ function App() {
 
   return (
     <>
+    <Provider store={store}>
+
       <BrowserRouter>
         { (
           <Routes>
             <Route
               path="/"
               element={
-                  <><Header /><DashboardTemplate /></>
+                <><Header /><DashboardTemplate /></>
               }
-            />
+              />
             <Route
               path="/jobs"
               element={
-                  <><Header /><Apply /><DashboardTemplate /></>
+                <><Header /><Apply /><DashboardTemplate /></>
               }
-            />
+              />
             <Route
               path="/login"
               element={
@@ -47,7 +50,7 @@ function App() {
                   <Login />
                 </PublicRoute>
               }
-            />
+              />
             <Route
               path="/register"
               element={
@@ -55,29 +58,30 @@ function App() {
                   <Register />
                 </PublicRoute>
               }
-            />
+              />
             <Route
               path="/application"
               element={
                 <><Header /><Application /><DashboardTemplate /></>
                 
               }
-            />
+              />
             <Route
               path="/diff"
               element={
-                  <><Header /><Difficulties /><DashboardTemplate /></>
+                <><Header /><Difficulties /><DashboardTemplate /></>
               }
-            />
+              />
             <Route
               path="/address"
               element={
-                  <><Header /><Address /><DashboardTemplate /></>
+                <><Header /><Address /><DashboardTemplate /></>
               }
-            />
+              />
           </Routes>
         )}
       </BrowserRouter>
+      </Provider>
     </>
   )
 }
