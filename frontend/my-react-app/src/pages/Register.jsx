@@ -19,7 +19,7 @@ const Register = () => {
       if (res.data.signup) {
         sessionStorage.setItem("token", res.data.token); // Store the token
         message.success("Register Successfully!");
-        navigate("/");
+        navigate("/login");
       } else {
         message.error(res.data.error);
       }

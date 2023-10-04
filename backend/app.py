@@ -64,7 +64,6 @@ def signup():
             'name': response['name'],
             'email': response['email'],
             'password': hashed_pass,
-            'nfts': []
         })
         access_token = create_access_token(identity=response['email'])
         return jsonify({'signup': True, 'token': access_token})
