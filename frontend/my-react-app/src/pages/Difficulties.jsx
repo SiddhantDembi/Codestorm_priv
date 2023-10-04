@@ -1,15 +1,37 @@
 import React from "react";
 import "../diff.css"
 
+async function onfinishHandler(e){
+    e.preventDefault();
+    console.log(e)
+    try {
+      dispatch(showLoading());
+      const res = await axios.post("http://127.0.0.1:5000/diff");
+
+      dispatch(hideLoading());
+      if (res.data.signup) {
+        sessionStorage.setItem("token", res.data.token); // Store the token
+        message.success("Register Successfully!");
+        navigate("/login");
+      } else {
+        message.error(res.data.error);
+      }
+    } catch (error) {
+      dispatch(hideLoading());
+      console.log(error);
+      message.error("Something Went Wrong");
+    }
+  };
+
 export default function Difficulties(){
     return ( 
         <>
         
-        <h1 className="title">Assesment</h1>
+        <h1 className="title2">Assesment</h1>
 
-        <form id="form-diff">
+        <form onSubmit={onfinishHandler} id="form-diff">
 
-        <h1 title>Section 1: Interests</h1>
+        <h1 className="title2">Section 1: Interests</h1>
 
         <div className="form_control">
             <label className="question">
@@ -22,7 +44,7 @@ export default function Difficulties(){
             <label htmlFor="Male"><input type="radio" name="1"/>Extremely interested</label>
         </div>
 
-        <div className="form_control">
+        {/* <div className="form_control">
             <label className="question">
             How do you feel about working in a team and collaborating with others?
             </label> 
@@ -56,7 +78,7 @@ export default function Difficulties(){
             <label htmlFor="Male"><input type="radio" name="3"/>Extremely interested</label>
         </div>
 
-        <h1 title>Section 2: Strengths</h1>
+        <h1 className="title2">Section 2: Strengths</h1>
 
         <div className="form_control">
             <label className="question">
@@ -92,7 +114,7 @@ export default function Difficulties(){
         </div>
 
 
-        <h1 title>Section 3: Values</h1>
+        <h1 className="title2">Section 3: Values</h1>
 
         <div className="form_control">
             <label className="question">
@@ -137,7 +159,11 @@ export default function Difficulties(){
             <label htmlFor="Male"><input type="radio" name="9"/>Moderately important</label>
             <label htmlFor="Male"><input type="radio" name="9"/>Very important</label>
             <label htmlFor="Male"><input type="radio" name="9"/>Extremely important</label>
-        </div>
+        </div> */}
+
+        <button className="btn btn-primary" id="b1" type="submit">
+            Submit
+          </button>
 
         </form>
     </>

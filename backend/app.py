@@ -69,6 +69,15 @@ def signup():
         return jsonify({'signup': True, 'token': access_token})
     return jsonify({'signup': False, 'error': 'EmailId already registered'})
 
+@app.route('/diff', methods=['POST'])
+def dif():
+    response = request.get_json()
+    print(response)
+    db.ans.insert_one({
+            response
+        })
+    return jsonify({"msg":'hello'})
+    
     # elif response['userType'] == 'ORG':
     #     isOrg = db.organisations.find_one({'email': response['email']})
     #     if isOrg is None:
