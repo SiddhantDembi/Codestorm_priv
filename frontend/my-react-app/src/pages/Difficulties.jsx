@@ -78,13 +78,18 @@ export default function Difficulties(){
       const res = axios.post("http://127.0.0.1:5000/diff", {"ans1":input1,"ans2":input2,"ans3":input3,"ans4":input4,"ans5":input5,"ans6":input6,"ans7":input7,"ans8":input8,"ans9":input9,"ans10":input10,
     })
         .then((res)=> {
-            console.log(res.data)
-
+            // console.log(res.data)
+            const data1 = JSON.stringify(res.data)
+            localStorage.setItem("data",data1)
+            
+            
         })
         .catch((err)=> {
             console.log(err)
         })
     // console.log(res.data)
+
+    
     }
     return ( 
         <>

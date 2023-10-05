@@ -608,7 +608,7 @@ def dif():
     # for key in suggest.keys():
     #     print(f"{key} -> {suggest[key]}")
 
-    return jsonify(l)
+    return jsonify({'arr': l})
 
 
 
