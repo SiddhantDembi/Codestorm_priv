@@ -80,14 +80,14 @@ function Sidebar() {
     {
       id:4,
       href:"/diff",
-      text: "Functional Difficulties faced",
+      text: "Assesment",
       image: academic_managementIcon,
       sub_text: [],
     },
     {
       id:5,
-      href:"/jobs",
-      text: "Jobs",
+      href:"/chatbot",
+      text: "Chatbot",
       image: academic_managementIcon,
       sub_text: [],
     },

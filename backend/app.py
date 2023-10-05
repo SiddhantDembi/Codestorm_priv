@@ -5,6 +5,7 @@ from flask_jwt_extended import JWTManager, jwt_required, create_access_token, ge
 from flask_pymongo import PyMongo
 from flask_bcrypt import Bcrypt
 from dotenv import load_dotenv, find_dotenv
+from langchain.llms import Cohere
 load_dotenv(find_dotenv())
 
 app = Flask(__name__)
@@ -16,6 +17,22 @@ CORS(app)
 jwt = JWTManager(app)
 bcrypt = Bcrypt(app)
 db = PyMongo(app).db
+
+
+
+
+
+llm = Cohere(cohere_api_key="Pt5Aqeee3CA0uMkXnYNG16Q8yfwQ3rIZpV86MwB0", temperature=0.5)
+
+@app.route('/ask', methods=['POST'])
+def ask_question():
+    data = request.get_json()
+    
+    print(data)
+    question = data.get('question', '')
+    response = llm.predict(question)
+    return jsonify({"answer": response})
+
 
 @app.route('/jobss',methods=["POST","GET"])
 def job():

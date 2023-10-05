@@ -21,6 +21,11 @@ import Apply from "./pages/Apply";
 import Difficulties from "./pages/Difficulties";
 import Address from "./pages/Address";
 import Resources from "./pages/ResourcePage";
+import About from './pages/About'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import Footer from './pages/Footer'
+import Chatbot from './pages/Chatbot'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,9 +44,9 @@ function App() {
               }
               />
             <Route
-              path="/jobs"
+              path="/chatbot"
               element={
-                <><Header /><Apply /><DashboardTemplate /></>
+                <><Header /><Chatbot/><DashboardTemplate /></>
               }
               />
             <Route
@@ -84,6 +89,24 @@ function App() {
               path="/address"
               element={
                 <><Header /><Address /><DashboardTemplate /></>
+              }
+              />
+            <Route
+              path="/about"
+              element={
+                <><Header /><About/><Footer/></>
+              }
+              />
+            <Route
+              path="/home1"
+              element={
+                <><Header /><Home/><About/><Contact/><Footer/></>
+              }
+              />
+            <Route
+              path="/contact"
+              element={
+                <><Header /><Contact/><Footer/></>
               }
               />
           </Routes>
