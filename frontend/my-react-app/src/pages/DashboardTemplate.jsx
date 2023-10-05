@@ -98,6 +98,13 @@ function Sidebar() {
       image: academic_managementIcon,
       sub_text: [],
     },
+    {
+      id:7,
+      href:"/joblist",
+      text: "Joblist",
+      image: academic_managementIcon,
+      sub_text: [],
+    },
   ];
   return (
     <aside>

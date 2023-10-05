@@ -26,6 +26,7 @@ import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Footer from './pages/Footer'
 import Chatbot from './pages/Chatbot'
+import JobList from './pages/JobList'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -107,6 +108,12 @@ function App() {
               path="/contact"
               element={
                 <><Header /><Contact/><Footer/></>
+              }
+              />
+            <Route
+              path="/joblist"
+              element={
+                <><JobList/></>
               }
               />
           </Routes>
